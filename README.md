@@ -37,6 +37,8 @@ cd ~/dotfiles
 
 Installs all packages (official + AUR) and stows every component.
 
+---
+
 ### Manual
 
 Clone and use [GNU Stow](https://www.gnu.org/software/stow/) to symlink only what you want:
@@ -44,16 +46,21 @@ Clone and use [GNU Stow](https://www.gnu.org/software/stow/) to symlink only wha
 ```sh
 git clone https://github.com/colechodio/dotfiles.git ~/dotfiles
 cd ~/dotfiles
-stow hypr kitty nvim tmux waybar swaync wofi bashrc oh-my-bash
+stow --adopt hypr kitty nvim tmux waybar swaync wofi bashrc oh-my-bash
+git restore .
 ```
 
-This creates symlinks from each component's tree into `$HOME` (e.g. `~/.config/hypr/` → `dotfiles/hypr/.config/hypr/`).
+> [!NOTE]
+> This overwrites the files in `dotfiles` directory, but it creates the symlinks from each component's tree into `$HOME` (e.g. `~/.config/hypr/` → `dotfiles/hypr/.config/hypr/`). Afterwards, `git restore .` will bring my custom configs back.
 
 Stow packages individually if you only want specific parts:
 
 ```sh
-stow tmux nvim   # just tmux and neovim configs
+stow --adopt tmux nvim   # just tmux and neovim configs
+git restore tmux nvim
 ```
+
+---
 
 To install packages on their own:
 
@@ -62,4 +69,7 @@ sudo pacman -S --needed - < pkglist-official.txt
 yay -S --needed - < pkglist-aur.txt
 ```
 
-Each component directory has its own `README.md` with full details on keybinds, dependencies, structure, and features.
+--- 
+
+> [!IMPORTANT]
+> Each component directory has its own `README.md` with full details on keybinds, dependencies, structure, and features.
