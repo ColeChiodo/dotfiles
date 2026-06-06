@@ -30,7 +30,7 @@ My personal Arch(btw) Linux desktop configuration with a Gruvbox themed setup bu
 ### Easy
 
 ```sh
-git clone https://github.com/colechodio/dotfiles.git ~/dotfiles
+git clone https://github.com/colechiodo/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./install.sh
 ```
