@@ -17,7 +17,7 @@ My Neovim configuration, managed with [lazy.nvim](https://github.com/folke/lazy.
 | **AI assistant** | [99](https://github.com/ThePrimeagen/99) by ThePrimeagen |
 | **Typing** | vim-be-good practice game |
 | **Markdown** | Live preview in the browser |
-| **Misc** | Autopairs, Comment.nvim, gruvbox colorscheme (soft contrast, transparent) |
+| **Misc** | Autopairs, Comment.nvim, neoscroll.nvim (smooth scrolling), gruvbox colorscheme (soft contrast, transparent) |
 
 ## Keymaps
 
@@ -100,7 +100,7 @@ Leader is `<Space>`.
     ├── settings.lua        # Editor options
     ├── keymaps.lua         # Key mappings
     └── plugins/
-        ├── init.lua        # Plugin list
+        ├── init.lua        # Plugin list (incl. neoscroll.nvim)
         ├── 99.lua, cmp.lua, comment.lua, gitsigns.lua,
         ├── lsp.lua, nvimtree.lua, statusline.lua,
         ├── telescope.lua, treesitter.lua

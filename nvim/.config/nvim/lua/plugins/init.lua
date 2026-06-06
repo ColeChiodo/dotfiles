@@ -116,4 +116,11 @@ return {
 			require("plugins.99")
 		end,
 	},
+	{
+		"karb94/neoscroll.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("neoscroll").setup()
+		end,
+	},
 }
