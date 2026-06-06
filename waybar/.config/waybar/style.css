@@ -1,1 +1,203 @@
-/etc/xdg/waybar/style.css
+/* -------- Global -------- */
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: "Iosevka Nerd Font";
+    font-weight: 500;
+    font-size: 13px;
+    padding: 0;
+}
+
+/* Gruvbox base: #1d2021 / #282828 / #32302f */
+window#waybar {
+    background: rgba(29, 32, 33, 0.6);
+    border-bottom: 1px solid #32302f;
+    color: #ebdbb2;
+}
+
+/* -------- Tooltip -------- */
+tooltip {
+    background-color: #1d2021;
+    border: 1px solid #504945;
+    padding: 4px 8px;
+    color: #ebdbb2;
+}
+
+/* Common module spacing — thin */
+#clock,
+#tray,
+#cpu,
+#memory,
+#battery,
+#network,
+#bluetooth,
+#pulseaudio {
+    margin: 3px 3px;
+    padding: 2px 8px;
+    border: 1px solid #3c3836;
+    background-color: #282828;
+    color: #ebdbb2;
+}
+
+/* -------------------------------------- */
+/* ------ Gruvbox + pastel accents ------ */
+/* -------------------------------------- */
+
+/* CPU = Gruvbox yellow-orange tone */
+#cpu {
+    background-color: #3b2e1e;
+    border-color: #d79921; /* gruvbox yellow */
+    color: #f2d6a2;
+}
+
+#cpu.critical {
+    background-color: #4a2a2a;
+    border-color: #cc241d; /* gruvbox red */
+    color: #ffb3b3;
+}
+
+/* Memory = Gruvbox purple */
+#memory {
+    background-color: #35293f;
+    border-color: #b16286; /* purple */
+    color: #e8c7df;
+}
+
+#memory.critical {
+    background-color: #4a2c4a;
+    border-color: #d3869b;
+    color: #ffbde6;
+}
+
+/* Network = Gruvbox aqua (but pastel-cyan leaning) */
+#network {
+    background-color: #233533;
+    border-color: #689d6a; /* gruvbox green/aqua */
+    color: #c7efd5;
+}
+
+/* Bluetooth = blue (kept from your preference) */
+#bluetooth {
+    background-color: #1f2c40;
+    border-color: #458588; /* gruvbox blue */
+    color: #cbe3ff;
+}
+
+/* Audio = pastel pink touch (allowed accent) */
+#pulseaudio {
+    background-color: #3b2b35;
+    border-color: #d3869b; /* gruvbox pinkish purple */
+    color: #f5d6e7;
+}
+
+/* Tray = Gruvbox gray */
+#tray {
+    background-color: #32302f;
+    border-color: #504945;
+}
+
+/* Battery = Gruvbox green */
+#battery {
+    background-color: #2e3a27;
+    border-color: #98971a; /* gruvbox green */
+    color: #d6e6b0;
+}
+
+#battery.warning {
+    background-color: #3c3425;
+    border-color: #d79921; /* yellow */
+    color: #f4e4b5;
+}
+
+#battery.critical,
+#battery.urgent {
+    background-color: #432323;
+    border-color: #cc241d; /* red */
+    color: #f2b4b4;
+}
+
+/* -------------------------------------- */
+/* -------- Workspaces ------------------ */
+/* -------------------------------------- */
+
+#workspaces {
+    margin: 3px 0 3px 3px;
+    padding: 2px;
+    background-color: #282828;
+    border: 1px solid #3c3836;
+}
+
+#workspaces button {
+    all: unset;
+    padding: 2px 2px;
+    margin: 0 2px;
+    border: 1px solid transparent;
+    color: #ebdbb2;
+    transition: 100ms ease;
+}
+
+/* Hover */
+#workspaces button:hover {
+    background-color: #3c3836;
+    border-color: #504945;
+}
+
+/* Focused = Gruvbox aqua (teal) */
+#workspaces button.focused {
+    background-color: #2e3a39;
+    border-color: #689d6a;
+    color: #d0f5e2;
+}
+
+/* Urgent = Gruvbox bright-orange */
+#workspaces button.urgent {
+    background-color: #d65d0e;
+    border-color: #fe8019;
+    color: #1d2021;
+}
+
+#workspaces button.active {
+	color: #825804;
+}
+
+/* -------- Clock -------- */
+#clock {
+    background-color: #282828;
+    border-color: #3c3836;
+    color: #f2e5bc; /* gruvbox bright-cream */
+}
+
+/* -------------------------------------- */
+/* -------- Power Profile --------------- */
+/* -------------------------------------- */
+
+#custom-power {
+    margin: 3px 3px;
+    padding: 2px 8px;
+    border: 1px solid #3c3836;
+    background-color: #282828;
+    color: #ebdbb2;
+    transition: 120ms ease;
+}
+
+/* Balanced = Gruvbox green */
+#custom-power.balanced {
+    background-color: #2e3a27;
+    border-color: #98971a;
+    color: #d6e6b0;
+}
+
+/* Power saver = Gruvbox blue/aqua */
+#custom-power.powersaver {
+    background-color: #1f2c40;
+    border-color: #458588;
+    color: #cbe3ff;
+}
+
+/* Performance = Gruvbox orange/red */
+#custom-power.performance {
+    background-color: #4a2d1f;
+    border-color: #fe8019;
+    color: #ffd6b3;
+}
