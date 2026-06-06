@@ -1,0 +1,9 @@
+theme = ~/.config/wofi/style.css
+matching-mode=fuzzy
+
+# Launcher mode: "drun" for desktop apps, "run" for commands
+show-drun = true
+show-run = false
+
+show-icons = true
+icon-size = 32

@@ -1,0 +1,90 @@
+/* -------- Global -------- */
+* {
+    font-family: "Iosevka Nerd Font";
+    font-size: 13px;
+}
+
+/* ===== Control Center (popup window) ===== */
+.control-center {
+    background: rgba(29, 32, 33, 0.85);
+    border: 1px solid #32302f;
+    color: #ebdbb2;
+    border-radius: 0;
+}
+
+/* ===== Notification window ===== */
+.notification-window {
+    background: transparent;
+}
+
+/* ===== Individual notifications ===== */
+.notification {
+    background-color: #282828;
+    border: 1px solid #3c3836;
+    color: #ebdbb2;
+    margin: 6px;
+    padding: 8px;
+    border-radius: 0;
+}
+
+/* Hover effect */
+.notification:hover {
+    border-color: #504945;
+    background-color: #2f2b2a;
+}
+
+/* ===== Title / summary ===== */
+.summary {
+    font-weight: 600;
+    color: #f2e5bc; /* match clock accent */
+}
+
+/* ===== Body text ===== */
+.body {
+    color: #ebdbb2;
+    opacity: 0.9;
+}
+
+/* ===== Time label ===== */
+.time {
+    color: #a89984;
+    font-size: 11px;
+}
+
+/* ===== Close button ===== */
+.close-button {
+    background-color: #3c3836;
+    border: 1px solid #504945;
+    color: #ebdbb2;
+    border-radius: 0;
+    padding: 2px 6px;
+}
+
+.close-button:hover {
+    background-color: #504945;
+}
+
+/* ===== Action buttons (if notifications include them) ===== */
+.notification-action {
+    background-color: #32302f;
+    border: 1px solid #3c3836;
+    color: #ebdbb2;
+    margin-top: 4px;
+}
+
+.notification-action:hover {
+    background-color: #3c3836;
+    border-color: #504945;
+}
+
+/* ===== Critical / urgent notifications ===== */
+.notification.critical {
+    background-color: #432323;
+    border-color: #cc241d;
+    color: #ffb4b4;
+}
+
+/* ===== Icons (optional polish) ===== */
+.notification-icon {
+    margin-right: 8px;
+}

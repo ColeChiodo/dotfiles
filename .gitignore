@@ -1,0 +1,14 @@
+.bashrc_local
+**/.git/
+.env
+.env.*
+*.key
+*.pem
+id_*
+secrets
+*.token
+*.log
+.DS_Store
+*.swp
+*.swo
+*~
