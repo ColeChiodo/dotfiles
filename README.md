@@ -73,3 +73,8 @@ yay -S --needed - < pkglist-aur.txt
 
 > [!IMPORTANT]
 > Each component directory has its own `README.md` with full details on keybinds, dependencies, structure, and features.
+
+---
+
+> [!NOTE]
+> I also maintain an [X11/Openbox](x11/) config. Hyprland (Wayland) is my daily driver, but it has issues with things like Sunshine game streaming and OBS Studio window capture. Those work fine under X11. You don't have to install it if you don't need it.
