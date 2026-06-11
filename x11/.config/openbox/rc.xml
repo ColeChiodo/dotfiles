@@ -746,6 +746,16 @@
 
   # end of the example
 -->
+  <application class="kitty">
+	  <maximized>yes</maximized>
+	  <focus>yes</focus>
+	  <decor>yes</decor>
+  </application>
+  <application class="steam">
+	  <maximized>yes</maximized>
+	  <focus>yes</focus>
+	  <decor>no</decor>
+  </application>
 </applications>
 
 </openbox_config>

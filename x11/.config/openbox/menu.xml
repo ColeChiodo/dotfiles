@@ -2,6 +2,50 @@
 
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 
+<menu id="apps-tui-menu" label="TUIs (Kitty)">
+  <item label="System Monitor (htop)">
+    <action name="Execute">
+      <command>kitty --title float-term -e htop</command>
+    </action>
+  </item>
+
+  <item label="System Monitor (btop)">
+    <action name="Execute">
+      <command>kitty --title float-term -e btop</command>
+    </action>
+  </item>
+
+  <item label="Bluetooth (bluetui)">
+    <action name="Execute">
+      <command>kitty --title float-term -e bluetui</command>
+    </action>
+  </item>
+
+  <item label="Network (impala)">
+    <action name="Execute">
+      <command>kitty --title float-term -e impala</command>
+    </action>
+  </item>
+
+  <item label="Network Manager (nmtui)">
+    <action name="Execute">
+      <command>kitty --title float-term -e nmtui</command>
+    </action>
+  </item>
+
+  <item label="Audio Mixer (pulsemixer)">
+    <action name="Execute">
+      <command>kitty --title float-term -e pulsemixer</command>
+    </action>
+  </item>
+
+  <item label="Wiremix">
+    <action name="Execute">
+      <command>kitty --title float-term -e wiremix</command>
+    </action>
+  </item>
+</menu>
+
 <menu id="apps-term-menu" label="Terminals">
   <item label="Kitty">
     <action name="Execute">
@@ -87,12 +131,8 @@
 
 <menu id="root-menu" label="Openbox 3">
   <separator label="Applications" />
-  <menu id="apps-accessories-menu"/>
-  <menu id="apps-editors-menu"/>
-  <menu id="apps-graphics-menu"/>
+  <menu id="apps-tui-menu"/>
   <menu id="apps-net-menu"/>
-  <menu id="apps-office-menu"/>
-  <menu id="apps-multimedia-menu"/>
   <menu id="apps-term-menu"/>
   <menu id="apps-fileman-menu"/>
   <separator label="System" />
