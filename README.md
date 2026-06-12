@@ -4,12 +4,15 @@ My personal Arch(btw) Linux desktop configuration with a Gruvbox themed setup bu
 
 ![Desktop](.resources/hyprland.png)
 
+> [!NOTE]
+> I also maintain an [X11/Openbox](x11/) config. Hyprland (Wayland) is my daily driver, but it has issues with things like Sunshine game streaming and OBS Studio window capture. Those work fine under X11. You don't have to install it if you don't need it.
+
 ## Stack
 
 | Component | Choice | Config |
 |-----------|--------|--------|
 | **Window Manager** | [Hyprland](https://hyprland.org/) | [hypr/](hypr/) |
-| **Shell** | Bash + [oh-my-bash](https://github.com/ohmybash/oh-my-bash) | [bashrc/](bashrc/) |
+| **Shell** | Bash + [oh-my-bash](https://github.com/ohmybash/oh-my-bash) | [bashrc/](bashrc/) + [oh-my-bash/](oh-my-bash/) |
 | **Terminal** | [Kitty](https://sw.kovidgoyal.net/kitty/) | [kitty/](kitty/) |
 | **Editor** | [Neovim](https://neovim.io/) + [lazy.nvim](https://github.com/folke/lazy.nvim) | [nvim/](nvim/) |
 | **Multiplexer** | [Tmux](https://github.com/tmux/tmux) | [tmux/](tmux/) |
@@ -43,7 +46,7 @@ Installs all packages (official + AUR) and stows every component.
 
 Clone and use [GNU Stow](https://www.gnu.org/software/stow/) to symlink only what you want:
 
-```sh
+```bash
 git clone https://github.com/colechodio/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 stow --adopt hypr kitty nvim tmux waybar swaync wofi bashrc oh-my-bash
@@ -55,7 +58,7 @@ git restore .
 
 Stow packages individually if you only want specific parts:
 
-```sh
+```bash
 stow --adopt tmux nvim   # just tmux and neovim configs
 git restore tmux nvim
 ```
@@ -64,7 +67,7 @@ git restore tmux nvim
 
 To install packages on their own:
 
-```sh
+```bash
 sudo pacman -S --needed - < pkglist-official.txt
 yay -S --needed - < pkglist-aur.txt
 ```
@@ -74,7 +77,4 @@ yay -S --needed - < pkglist-aur.txt
 > [!IMPORTANT]
 > Each component directory has its own `README.md` with full details on keybinds, dependencies, structure, and features.
 
----
 
-> [!NOTE]
-> I also maintain an [X11/Openbox](x11/) config. Hyprland (Wayland) is my daily driver, but it has issues with things like Sunshine game streaming and OBS Studio window capture. Those work fine under X11. You don't have to install it if you don't need it.
