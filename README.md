@@ -22,11 +22,15 @@ My personal Arch(btw) Linux desktop configuration with a Gruvbox themed setup bu
 
 ## Screenshots
 
-| | | |
-|---|---|---|
-| ![Kitty](.resources/kitty.png) | ![Neovim](.resources/nvim.png) | ![Tmux](.resources/tmux.png) |
-| ![Waybar](.resources/waybar.png) | ![SwayNC](.resources/swaync.png) | ![Wofi](.resources/wofi.png) |
-| ![Bash](.resources/bashrc.png) | ![Powerline](.resources/powerline.png) | |
+| [Kitty](kitty/) | [Neovim](nvim/) |
+|---|---|
+| ![Kitty](.resources/kitty.png) | ![Neovim](.resources/nvim.png) |
+| [Tmux](tmux/) | [Waybar](waybar/) |
+| ![Tmux](.resources/tmux.png) | ![Waybar](.resources/waybar.png) |
+| [SwayNC](swaync/) | [Wofi](wofi/) |
+| ![SwayNC](.resources/swaync.png) | ![Wofi](.resources/wofi.png) |
+| [Bash](bashrc/) | [Powerline](oh-my-bash/) |
+| ![Bash](.resources/bashrc.png) | ![Powerline](.resources/powerline.png) |
 
 ## Install
 
