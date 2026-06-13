@@ -39,7 +39,8 @@
     },
 
     "clock": {
-        "format": "{:%H:%M - %a, %b %d}",
+        "format": "{:%H:%M:%S - %a, %b %d}",
+        "interval": 1,
         "tooltip": false,
 		"on-click": "date '+%m-%d-%Y' | wl-copy",
 		"on-click-right": "date '+%Y-%m-%d' | wl-copy",
