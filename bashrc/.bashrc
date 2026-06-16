@@ -237,3 +237,4 @@ export PATH="$HOME/.opencode/bin:$PATH"
 export PATH=$HOME/.local/bin:$PATH
 export EDITOR=nvim
 export PATH=$PATH:$HOME/.local/go/bin
+export PATH="$HOME/.cargo/bin:$PATH"
