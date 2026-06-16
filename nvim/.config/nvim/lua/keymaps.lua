@@ -63,3 +63,6 @@ map("n", "gi", "<cmd>Telescope lsp_implementation<CR>")
 map("n", "gr", "<cmd>Telescope lsp_references<CR>")
 map("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
 map("n", "<leader>dl", "<cmd>lua vim.lsp.buf.code_action()<CR>")
+
+-- Tuxedo
+map("n", "<leader>tt", "<cmd>Tuxedo<CR>")
