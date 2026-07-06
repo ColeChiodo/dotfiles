@@ -115,7 +115,7 @@
         "nospacing": 1,
         "on-click": "kitty --title float-term -e pulsemixer",
 		"on-click-middle": "~/.config/waybar/scripts/audio-monitor-toggle.sh",
-		"on-click-right": "kitty --title float-term -e wiremix",
+		"on-click-right": "~/.config/waybar/scripts/shazam.sh",
         "tooltip": false
     }
 }
