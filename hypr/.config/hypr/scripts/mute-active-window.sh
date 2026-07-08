@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
 
-PID=$(hyprctl activewindow -j | jq -r '.pid')
+APP=$(hyprctl activewindow -j | jq -r '.class')
 
-NODE=$(pw-dump | jq -r --arg pid "$PID" '
+NODE=$(pw-dump | jq -r --arg app "$APP" '
   .[]
   | select(.type == "PipeWire:Interface:Node")
-  | select(.info.props["application.process.id"] == $pid)
+  | select(.info.props["application.name"] | ascii_downcase | contains($app | ascii_downcase))
   | .id
 ' | head -n1)
 
-[ -n "$NODE" ] && wpctl set-mute "$NODE" toggle
+if [ -n "$NODE" ]; then
+    wpctl set-mute "$NODE" toggle
+else
+    notify-send "Mute Tab" "No matching audio stream"
+fi

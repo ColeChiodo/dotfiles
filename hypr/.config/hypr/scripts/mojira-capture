@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+# mojira-capture — take a fullscreen screenshot and upload to Mojira
+#
+# Usage:
+#   ./mojira-capture
+#
+# Environment:
+#   MOJIRA_URL   server URL (default: http://localhost:8000)
+#
+# Dependencies:
+#   grim   (screenshot)   sudo pacman -S grim
+#   curl   (upload)       usually pre-installed
+
+set -euo pipefail
+
+SERVER="${MOJIRA_URL:-http://localhost:8000}"
+TMPFILE=$(mktemp /tmp/mojira-XXXXXX.png)
+trap 'rm -f "$TMPFILE"' EXIT
+
+if ! command -v grim &>/dev/null; then
+    echo "Error: grim not found. Install with: sudo pacman -S grim" >&2
+    exit 1
+fi
+
+if ! command -v curl &>/dev/null; then
+    echo "Error: curl not found." >&2
+    exit 1
+fi
+
+if ! command -v notify-send &>/dev/null; then
+    echo "Warning: notify-send not found — install mako or dunst for desktop notifications" >&2
+fi
+
+grim "$TMPFILE"
+
+echo "Uploading..." >&2
+VIEWER_URL=$(curl -s -o /dev/null -w "%{redirect_url}" \
+    -X POST "$SERVER/captures" \
+    -F "image=@$TMPFILE") || {
+    echo "Error: upload failed — is the server running at $SERVER?" >&2
+    exit 1
+}
+
+if [ -z "$VIEWER_URL" ]; then
+    echo "Error: server returned no redirect URL" >&2
+    exit 1
+fi
+
+notify-send "Mojira" "Screenshot uploaded\n$VIEWER_URL"
+echo "Screenshot uploaded — $VIEWER_URL" >&2
