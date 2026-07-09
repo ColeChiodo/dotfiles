@@ -71,6 +71,53 @@ vim.lsp.config("vue_ls", {
     capabilities = capabilities,
 })
 
+vim.lsp.config("htmx", {
+    filetypes = {
+        "html",
+        "templ",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue",
+        "svelte",
+    },
+
+    capabilities = capabilities,
+})
+
+vim.lsp.config("cssls", {
+    capabilities = capabilities,
+})
+
+vim.lsp.config("typos_lsp", {
+    capabilities = capabilities,
+})
+
+vim.lsp.config("harper_ls", {
+    capabilities = capabilities,
+})
+
+vim.lsp.config("marksman", {
+    capabilities = capabilities,
+})
+
+vim.lsp.config("jsonls", {
+    capabilities = capabilities,
+})
+
+vim.lsp.config("bashls", {
+    capabilities = capabilities,
+})
+
+vim.lsp.config("dockerls", {
+    capabilities = capabilities,
+})
+
+vim.lsp.config("docker_compose_language_service", {
+    capabilities = capabilities,
+})
+
 -- enable servers
 vim.lsp.enable({
     "clangd",
@@ -79,4 +126,14 @@ vim.lsp.enable({
     "ts_ls",
     "vtsls",
     "vue_ls",
+    "htmx",
+
+    "cssls",
+    "typos_lsp",
+    "harper_ls",
+    "marksman",
+    "jsonls",
+    "bashls",
+    "dockerls",
+    "docker_compose_language_service",
 })
