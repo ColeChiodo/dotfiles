@@ -80,6 +80,12 @@ Leader is `<Space>`.
 | `<C-j>` / `<C-k>` | Next / prev item |
 | `<Tab>` / `<S-Tab>` | Snippet expand / jump |
 
+### Tuxedo (Todolist)
+
+| Key | Action |
+|---|---|
+| `<leader>tt` | Open Todo List |
+
 ## Settings
 
 - Real tabs, `tabstop=4`, `shiftwidth=4`
