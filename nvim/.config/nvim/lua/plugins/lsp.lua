@@ -71,6 +71,18 @@ vim.lsp.config("vue_ls", {
     capabilities = capabilities,
 })
 
+vim.lsp.config("gopls", {
+    capabilities = capabilities,
+
+    settings = {
+        gopls = {
+            gofumpt = true,
+            staticcheck = true,
+            usePlaceholders = true,
+        },
+    },
+})
+
 vim.lsp.config("htmx", {
     filetypes = {
         "html",
@@ -126,6 +138,7 @@ vim.lsp.enable({
     "ts_ls",
     "vtsls",
     "vue_ls",
+	"gopls",
     "htmx",
 
     "cssls",
