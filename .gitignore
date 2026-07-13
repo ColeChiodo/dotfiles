@@ -1,3 +1,4 @@
+ INSERT  ❯ cat .gitignore
 .bashrc_local
 **/.git/
 .env
@@ -12,3 +13,47 @@ secrets
 *.swp
 *.swo
 *~
+
+# Ignore generated/user configs inside packages
+bashrc/.config/*
+hypr/.config/*
+kitty/.config/*
+nvim/.config/*
+oh-my-bash/.config/*
+swaync/.config/*
+tmux/.config/*
+waybar/.config/*
+wofi/.config/*
+x11/.config/*
+
+# Keep managed configs
+!bashrc/.config/bashrc/
+!bashrc/.config/bashrc/**
+
+!hypr/.config/hypr/
+!hypr/.config/hypr/**
+
+!kitty/.config/kitty/
+!kitty/.config/kitty/**
+
+!nvim/.config/nvim/
+!nvim/.config/nvim/**
+
+!oh-my-bash/.config/oh-my-bash/
+!oh-my-bash/.config/oh-my-bash/**
+
+!swaync/.config/swaync/
+!swaync/.config/swaync/**
+
+!tmux/.config/tmux/
+!tmux/.config/tmux/**
+
+!waybar/.config/waybar/
+!waybar/.config/waybar/**
+
+!wofi/.config/wofi/
+!wofi/.config/wofi/**
+
+!x11/.config/x11/
+!x11/.config/x11/**
+
