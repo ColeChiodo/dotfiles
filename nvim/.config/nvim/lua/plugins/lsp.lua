@@ -130,6 +130,10 @@ vim.lsp.config("docker_compose_language_service", {
     capabilities = capabilities,
 })
 
+vim.lsp.config("ols", {
+    capabilities = capabilities,
+})
+
 -- enable servers
 vim.lsp.enable({
     "clangd",
@@ -149,4 +153,6 @@ vim.lsp.enable({
     "bashls",
     "dockerls",
     "docker_compose_language_service",
+
+	"ols",
 })

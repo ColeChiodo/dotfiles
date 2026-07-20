@@ -13,7 +13,7 @@
 
 set -euo pipefail
 
-SERVER="${MOJIRA_URL:-http://localhost:8000}"
+SERVER="${MOJIRA_URL:-http://pup:8000}"
 TMPFILE=$(mktemp /tmp/mojira-XXXXXX.png)
 trap 'rm -f "$TMPFILE"' EXIT
 
