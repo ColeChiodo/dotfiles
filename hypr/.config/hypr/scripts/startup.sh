@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+hyprctl dispatch moveworkspacetomonitor 2 eDP-1
+
 # Start D-Bus session
 export $(dbus-launch)
 
