@@ -21,36 +21,44 @@
         "cpu_text",
         "cpu",
         "memory",
-		"bluetooth",
+        "bluetooth",
         "network",
-		"custom/power",
+        "custom/power",
         "pulseaudio"
     ],
 
-    "sway/workspaces": {
+    "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "tooltip": false
+        "tooltip": true,
+        "tooltip-format": "Workspace {name}\nLeft click: Switch workspace",
+        "format": "{name}",
+        "on-click": "activate"
     },
 
     "tray": {
         "spacing": 10,
-        "tooltip": false
+        "tooltip": true,
+        "tooltip-format": "System tray icons\nClick tray icons for app actions"
     },
 
     "clock": {
         "format": "{:%H:%M:%S - %a, %b %d}",
         "interval": 1,
-        "tooltip": false,
-		"on-click": "date '+%m-%d-%Y' | wl-copy",
-		"on-click-right": "date '+%Y-%m-%d' | wl-copy",
-		"on-click-middle": "date '+%s' | wl-copy"
+        "tooltip": true,
+        "tooltip-format": "Left click: Copy date (MM-DD-YYYY)\nMiddle click: Copy Unix timestamp\nRight click: Copy date (YYYY-MM-DD)",
+        "on-click": "date '+%m-%d-%Y' | wl-copy",
+        "on-click-middle": "date '+%s' | wl-copy",
+        "on-click-right": "date '+%Y-%m-%d' | wl-copy"
     },
 
     "cpu": {
         "format": "cpu {usage}%",
         "interval": 2,
-		"on-click": "kitty --title float-term -e htop",
+        "tooltip": true,
+        "tooltip-format": "CPU usage: {usage}%\nLeft click: Open htop",
+
+        "on-click": "kitty --title float-term -e htop",
 
         "states": {
             "critical": 90
@@ -60,7 +68,10 @@
     "memory": {
         "format": "mem {percentage}%",
         "interval": 2,
-		"on-click": "kitty --title float-term -e btop",
+        "tooltip": true,
+        "tooltip-format": "Memory usage: {percentage}%\nLeft click: Open btop",
+
+        "on-click": "kitty --title float-term -e btop",
 
         "states": {
             "critical": 80
@@ -68,54 +79,69 @@
     },
 
     "battery": {
-		"format": "bat {capacity}%",
-    	"interval": 5,
+        "format": "bat {capacity}%",
+        "interval": 5,
 
-    	"states": {
-    	    "warning": 20,
-    	    "critical": 10
-    	},
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
 
-    	"tooltip": false,
+        "tooltip": true,
+        "tooltip-format": "Battery: {capacity}%\nLeft click: Toggle power mode\nRight click: Set balanced power profile",
 
-    	"on-click": "~/.config/waybar/scripts/toggle-power.sh",
-    	"on-click-right": "powerprofilesctl set balanced"
-	},
+        "on-click": "~/.config/waybar/scripts/toggle-power.sh",
+        "on-click-right": "powerprofilesctl set balanced"
+    },
 
-	"custom/power": {
-	    "exec": "~/.config/waybar/scripts/power-status.sh",
-	    "on-click": "~/.config/waybar/scripts/toggle-power-mode.sh",
-	    "on-click-right": "powerprofilesctl set balanced",
-	    "interval": 2,
-	    "return-type": "json",
-	    "tooltip": true
-	},
+    "custom/power": {
+        "exec": "~/.config/waybar/scripts/power-status.sh",
+        "on-click": "~/.config/waybar/scripts/toggle-power-mode.sh",
+        "on-click-right": "powerprofilesctl set balanced",
+        "interval": 2,
+        "return-type": "json",
 
-	"bluetooth": {
-		"format-bluetooth": "{num_connections}",
-		"on-click": "kitty --title float-term -e bluetui",
-		"tooltip": false
-	},
+        "tooltip": true,
+        "tooltip-format": "Left click: Toggle power mode\nRight click: Set balanced mode"
+    },
+
+    "bluetooth": {
+        "format-bluetooth": "{num_connections}",
+
+        "tooltip": true,
+        "tooltip-format": "Bluetooth devices connected: {num_connections}\nLeft click: Open bluetui",
+
+        "on-click": "kitty --title float-term -e bluetui"
+    },
 
     "network": {
-        "format-wifi" : "wifi {bandwidthDownBits}",
+        "format-wifi": "wifi {bandwidthDownBits}",
         "format-ethernet": "enth {bandwidthDownBits}",
-        "format-disconnected" : "no network",
+        "format-disconnected": "no network",
+
         "interval": 5,
-       "tooltip": false,
-	   "on-click": "kitty --title float-term -e impala",
-	   "on-click-right": "kitty --title float-term -e nmtui"
+
+        "tooltip": true,
+        "tooltip-format": "Network status\nLeft click: Open WiFi manager (impala)\nRight click: Open NetworkManager TUI (nmtui)",
+
+        "on-click": "kitty --title float-term -e impala",
+        "on-click-right": "kitty --title float-term -e nmtui"
     },
 
     "pulseaudio": {
         "scroll-step": 5,
         "max-volume": 150,
+
         "format": "vol {volume}%",
         "format-bluetooth": "vol {volume}%",
+
         "nospacing": 1,
+
+        "tooltip": true,
+        "tooltip-format": "Volume: {volume}%\nLeft click: Open pulsemixer\nMiddle click: Toggle audio monitor\nRight click: Run Shazam",
+
         "on-click": "kitty --title float-term -e pulsemixer",
-		"on-click-middle": "~/.config/waybar/scripts/audio-monitor-toggle.sh",
-		"on-click-right": "~/.config/waybar/scripts/shazam.sh",
-        "tooltip": false
+        "on-click-middle": "~/.config/waybar/scripts/audio-monitor-toggle.sh",
+        "on-click-right": "~/.config/waybar/scripts/shazam.sh"
     }
 }
