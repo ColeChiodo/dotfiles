@@ -1,4 +1,4 @@
-theme = "default"
+theme = "coles-theme"
 
 [providers]
 default = ["desktopapplications", "runner"]

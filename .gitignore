@@ -57,3 +57,4 @@ x11/.config/*
 !x11/.config/x11/
 !x11/.config/x11/**
 
+walker/.config/walker/themes/default/
