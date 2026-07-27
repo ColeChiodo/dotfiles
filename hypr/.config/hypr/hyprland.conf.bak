@@ -98,8 +98,9 @@ bind = $mainMod, SPACE, exec, $menu
 bind = $mainMod, R, exec, kitty --title float-term -e wiremix
 bind = $mainMod CTRL SHIFT ALT, W, exec, pkill waybar || waybar
 bind = $mainMod, F, fullscreen,
-bind = $mainMod SHIFT, S, exec, hyprshot -m region --clipboard-only
 bind = $mainMod CTRL SHIFT ALT, M, exec, hyprctl dispatch exit
+
+bind = $mainMod SHIFT, S, exec, hyprshot -m region --clipboard-only
 bind = $mainMod, N, exec, ~/.config/hypr/scripts/mute-active-window.sh
 bind = $mainMod CTRL SHIFT ALT, P, exec, ~/.config/hypr/scripts/mojira-capture
 
