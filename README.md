@@ -18,7 +18,7 @@ My personal Arch(btw) Linux desktop configuration with a Gruvbox themed setup bu
 | **Multiplexer** | [Tmux](https://github.com/tmux/tmux) | [tmux/](tmux/) |
 | **Status Bar** | [Waybar](https://github.com/Alexays/Waybar) | [waybar/](waybar/) |
 | **Notifications** | [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) | [swaync/](swaync/) |
-| **Launcher** | [Wofi](https://sr.ht/~scoopta/wofi/) | [wofi/](wofi/) |
+| **Launcher** | [Walker](https://github.com/abenz1267/walker/) | [walker/](walker/) |
 
 ## Screenshots
 
@@ -27,8 +27,8 @@ My personal Arch(btw) Linux desktop configuration with a Gruvbox themed setup bu
 | ![Kitty](.resources/kitty.png) | ![Neovim](.resources/nvim.png) |
 | [Tmux](tmux/) | [Waybar](waybar/) |
 | ![Tmux](.resources/tmux.png) | ![Waybar](.resources/waybar.png) |
-| [SwayNC](swaync/) | [Wofi](wofi/) |
-| ![SwayNC](.resources/swaync.png) | ![Wofi](.resources/wofi.png) |
+| [SwayNC](swaync/) | [Walker](walker/) |
+| ![SwayNC](.resources/swaync.png) | ![Walker](.resources/walker.png) |
 | [Bash](bashrc/) | [Powerline](oh-my-bash/) |
 | ![Bash](.resources/bashrc.png) | ![Powerline](.resources/powerline.png) |
 
