@@ -20,15 +20,18 @@ hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region --clipboa
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("~/.config/hypr/scripts/mute-active-window.sh"))
 hl.bind(mainMod .. " + CTRL + SHIFT + ALT + P", hl.dsp.exec_cmd("~/.config/hypr/scripts/mojira-capture"))
 
--- Move focus with mainMod + arrow keys
+-- Move focused workspace
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + H",  hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + H",  hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + SHIFT + K",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + SHIFT + J",  hl.dsp.focus({ direction = "down" }))
+
+-- Move focus to next empty workspace
+hl.bind(mainMod .. " + L", hl.dsp.focus({ workspace = "empty" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
