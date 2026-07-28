@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+sudo cp /etc/greetd/config.openbox.toml /etc/greetd/config.toml
+
+sudo systemctl restart greetd

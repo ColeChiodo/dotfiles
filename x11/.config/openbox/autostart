@@ -19,3 +19,5 @@
 xmodmap ~/.Xmodmap &
 xrandr --output eDP-1 --primary --output HDMI-1-0 --same-as eDP-1 --auto
 
+sleep 3
+sunshine &
