@@ -247,4 +247,3 @@ export DEVKITPPC=$DEVKITPRO/devkitPPC
 export DEVKITA64=$DEVKITPRO/devkitA64
 
 export PATH=$DEVKITPRO/tools/bin:$DEVKITPRO/portlibs/switch/bin:$DEVKITA64/bin:$DEVKITARM/bin:$DEVKITPPC/bin:$PATH
-source ~/.bash_profile
