@@ -2,7 +2,7 @@
 
 My personal Arch(btw) Linux desktop configuration with a Gruvbox themed setup built on [Hyprland](https://hyprland.org/).
 
-![Desktop](.resources/hyprland.png)
+![Desktop](.resources/dotfiles.gif)
 
 > [!NOTE]
 > I also maintain an [X11/Openbox](x11/) config. Hyprland (Wayland) is my daily driver, but it has issues with things like Sunshine game streaming and OBS Studio window capture. Those work fine under X11. You don't have to install it if you don't need it.
